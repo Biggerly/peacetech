@@ -1,0 +1,74 @@
+🧠 HOW THE SITE WORKS (BIG PICTURE)
+1️⃣ Home (index.html)
+
+Hero image slider
+
+Services preview
+
+Gallery / Proof section (images)
+
+Trust copy
+
+CTA buttons → open booking modal
+
+2️⃣ Services (services.html)
+
+Full service list with icons
+
+Each service has “Book This Service”
+
+Clicking auto-fills the booking modal
+
+3️⃣ About (about.html)
+
+Business story
+
+Credibility & trust
+
+Why choose them
+
+4️⃣ Contact (contact.html)
+
+Phone
+
+WhatsApp
+
+Address
+
+Google Map
+
+Book button → modal
+
+5️⃣ Payment (payment.html)
+
+Clean Paystack payment form
+
+Looks professional and serious
+
+🔔 BOOKING SYSTEM (WEB3FORMS)
+Why Web3Forms = good choice
+
+No backend needed
+
+Reliable
+
+Free tier works
+
+Perfect for Firebase Hosting
+
+Booking Flow
+User clicks "Book"
+→ Modal opens
+→ User submits form
+→ Web3Forms emails client
+→ Success message shown
+
+📁 FILE STRUCTURE (FIREBASE)
+public/
+├── index.html
+├── services.html
+├── about.html
+├── contact.html
+├── payment.html
+└── assets/
+    └── images/
