@@ -1,0 +1,2 @@
+# peacetech
+static
