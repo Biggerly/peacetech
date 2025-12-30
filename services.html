@@ -149,7 +149,7 @@ section{
 /* SERVICES GRID */
 .services{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
   gap:30px;
 }
 .service-card{
@@ -173,6 +173,7 @@ section{
   color:#fff;
   cursor:pointer;
 }
+
 
 /* MODAL */
 .modal{
@@ -338,6 +339,73 @@ footer {
   }
 }
 
+/* Category Filter */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  background: #f0f4ff;
+  border: none;
+  border-radius: 25px;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* Category Filter */
+.category-filter {
+  max-width: 1200px;
+  margin: 30px auto 0;
+  padding: 0 20px;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  background: #f0f4ff;
+  border: none;
+  border-radius: 25px;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* Animation for filtering */
+.service-card {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.service-card.hidden {
+  display: none;
+}
+
 body {
   zoom: 0.8; /* 80% zoom out */
 }
@@ -381,45 +449,162 @@ body {
 <div class="page-header">
   <h1>Our Services</h1>
   <p>Professional, reliable solutions tailored to your needs</p>
-</div>
+</div><br>
 
+<div class="category-filter">
+  <div class="filter-buttons">
+    <button class="filter-btn active" onclick="filterServices('all')">All Services</button>
+    <button class="filter-btn" onclick="filterServices('business')">Business Services</button>
+    <button class="filter-btn" onclick="filterServices('paper')">Paper & Supplies</button>
+    <button class="filter-btn" onclick="filterServices('biogas')">Biogas Technology</button>
+  </div>
+</div>
 <!-- SERVICES -->
 <section>
   <div class="services">
 
-    <div class="service-card">
+    <!-- Business Registration Services -->
+    <div class="service-card" data-category="business">
       <i class="material-icons">apartment</i>
       <h3>CAC Registration</h3>
       <p>Business name registration, company incorporation, and post-incorporation services.</p>
       <button onclick="bookService('CAC Registration')">Book This Service</button>
     </div>
 
-    <div class="service-card">
-      <i class="material-icons">passport</i>
+    <!-- Paper & Textbook Supplies -->
+    <div class="service-card" data-category="paper">
+      <i class="material-icons">description</i>
+      <h3>Office Paper Supply</h3>
+      <p>Wholesale supply of A4, A3 papers, and other office stationery materials.</p>
+      <button onclick="bookService('Office Paper Supply')">Order Now</button>
+    </div>
+
+    <div class="service-card" data-category="paper">
+      <i class="material-icons">menu_book</i>
+      <h3>Textbook Supply</h3>
+      <p>Supply of educational textbooks for schools, colleges, and universities.</p>
+      <button onclick="bookService('Textbook Supply')">Order Now</button>
+    </div>
+
+    <div class="service-card" data-category="paper">
+      <i class="material-icons">book</i>
+      <h3>Notebook Supply</h3>
+      <p>Bulk supply of exercise books, note pads, and writing materials.</p>
+      <button onclick="bookService('Notebook Supply')">Order Now</button>
+    </div>
+
+    <div class="service-card" data-category="business">
+<i class="material-icons">local_airport</i>
       <h3>International Passport</h3>
       <p>Online passport processing, appointments, and guidance.</p>
       <button onclick="bookService('Passport Processing')">Book This Service</button>
     </div>
 
-    <div class="service-card">
+    <div class="service-card" data-category="business">
       <i class="material-icons">verified</i>
       <h3>Trademark Registration</h3>
       <p>Protect your brand legally with trademark filing and follow-up.</p>
       <button onclick="bookService('Trademark Registration')">Book This Service</button>
     </div>
 
-    <div class="service-card">
+    <div class="service-card" data-category="business">
       <i class="material-icons">school</i>
       <h3>Educational Consulting</h3>
       <p>Admissions guidance, documentation, and international study consulting.</p>
       <button onclick="bookService('Educational Consulting')">Book This Service</button>
     </div>
 
-    <div class="service-card">
+    <div class="service-card" data-category="business">
       <i class="material-icons">work</i>
       <h3>Business Consulting</h3>
       <p>Professional advisory, documentation, and business setup support.</p>
       <button onclick="bookService('Business Consulting')">Book This Service</button>
+    </div>
+
+    <!-- Paper & Textbook Supplies -->
+    <div class="service-card" data-category="paper">
+      <i class="material-icons">description</i>
+      <h3>Office Paper Supply</h3>
+      <p>Wholesale supply of A4, A3 papers, and other office stationery materials.</p>
+      <button onclick="bookService('Office Paper Supply')">Order Now</button>
+    </div>
+
+    <div class="service-card" data-category="paper">
+      <i class="material-icons">menu_book</i>
+      <h3>Textbook Supply</h3>
+      <p>Supply of educational textbooks for schools, colleges, and universities.</p>
+      <button onclick="bookService('Textbook Supply')">Order Now</button>
+    </div>
+
+    <div class="service-card" data-category="paper">
+      <i class="material-icons">book</i>
+      <h3>Notebook Supply</h3>
+      <p>Bulk supply of exercise books, note pads, and writing materials.</p>
+      <button onclick="bookService('Notebook Supply')">Order Now</button>
+    </div>
+
+    <!-- Biogas Technology Services -->
+    <div class="service-card" data-category="biogas">
+      <i class="material-icons">eco</i>
+      <h3>Biogas Facility Installation</h3>
+      <p>Complete installation of biogas facilities for homes, farms, and businesses.</p>
+      <button onclick="bookService('Biogas Facility Installation')">Book This Service</button>
+    </div>
+
+    <div class="service-card" data-category="biogas">
+      <i class="material-icons">water_damage</i>
+      <h3>Bio-digester Septic Tank</h3>
+      <p>Installation of eco-friendly septic tanks that convert waste to biogas.</p>
+      <button onclick="bookService('Bio-digester Septic Tank Installation')">Book This Service</button>
+    </div>
+
+    <div class="service-card" data-category="biogas">
+      <i class="material-icons">grass</i>
+      <h3>Waste to Fertilizer</h3>
+      <p>Convert organic waste into high-quality organic fertilizers for farming.</p>
+      <button onclick="bookService('Waste to Fertilizer Conversion')">Book This Service</button>
+    </div>
+
+    <div class="service-card" data-category="biogas">
+      <i class="material-icons">electric_bolt</i>
+      <h3>Waste to Energy</h3>
+      <p>Convert wastes to cooking gas and electricity for sustainable energy.</p>
+      <button onclick="bookService('Waste to Cooking Gas/Electricity Conversion')">Book This Service</button>
+    </div>
+
+    <div class="service-card" data-category="biogas">
+      <i class="material-icons">construction</i>
+      <h3>Bio-Fill Construction</h3>
+      <p>Construction of bio-fill and soak away systems for efficient waste management.</p>
+      <button onclick="bookService('Bio-Fill / Soak Away Construction')">Book This Service</button>
+    </div>
+
+    <div class="service-card" data-category="biogas">
+      <i class="material-icons">recycling</i>
+      <h3>Bio-Waste Management</h3>
+      <p>Professional consultancy for bio-waste management solutions.</p>
+      <button onclick="bookService('Bio-Waste Management Consultancy')">Book This Service</button>
+    </div>
+
+    <div class="service-card" data-category="biogas">
+      <i class="material-icons">local_gas_station</i>
+      <h3>Biogas Equipment Supply</h3>
+      <p>Supply of biogas cooking gas, lamps, sulfur extractors, and tanks.</p>
+      <button onclick="bookService('Biogas Equipment Supply')">Book This Service</button>
+    </div>
+
+    <div class="service-card" data-category="biogas">
+      <i class="material-icons">compress</i>
+      <h3>Biogas Compressor Machines</h3>
+      <p>Sales and installation of biogas compressor machines.</p>
+      <button onclick="bookService('Biogas Compressor Machine Sales')">Book This Service</button>
+    </div>
+
+    <div class="service-card" data-category="biogas">
+      <i class="material-icons">solar_power</i>
+      <h3>Renewable Energy Consultancy</h3>
+      <p>Expert consultancy for renewable power and energy solutions.</p>
+      <button onclick="bookService('Renewable Power/Energy Consultancy')">Book This Service</button>
     </div>
 
   </div>
@@ -460,14 +645,36 @@ body {
 
       <input type="text" name="name" placeholder="Full Name" required>
       <input type="tel" name="phone" placeholder="Phone Number" required>
-      <select name="service" id="serviceSelect" required>
-        <option value="">Select Service</option>
-        <option>CAC Registration</option>
-        <option>Passport Processing</option>
-        <option>Trademark Registration</option>
-        <option>Educational Consulting</option>
-        <option>Business Consulting</option>
-      </select>
+     <select name="service" id="serviceSelect" required>
+  <option value="">Select Service</option>
+  
+  <!-- Business Services -->
+  <option>CAC Registration</option>
+  <option>Passport Processing</option>
+  <option>Trademark Registration</option>
+  <option>Educational Consulting</option>
+  <option>Business Consulting</option>
+  
+  <!-- Paper & Textbook Supplies -->
+  <option>Office Paper Supply (A4, A3)</option>
+  <option>Textbook Supply</option>
+  <option>Notebook Supply</option>
+  
+  <!-- Biogas Technology Services -->
+  <option>Biogas Facility Installation</option>
+  <option>Bio-digester Septic Tank Installation</option>
+  <option>Waste to Fertilizer Conversion</option>
+  <option>Waste to Cooking Gas/Electricity Conversion</option>
+  <option>Bio-Fill / Soak Away Construction</option>
+  <option>Bio-Waste Management Consultancy</option>
+  <option>Biogas Equipment Supply</option>
+  <option>Biogas Compressor Machine Sales</option>
+  <option>Renewable Power/Energy Consultancy</option>
+  
+  <!-- Other -->
+  <option>General Consultation</option>
+  <option>Custom Service Request</option>
+</select>
       <textarea name="message" placeholder="Additional Message"></textarea>
 
       <button type="submit">Submit Booking</button>
@@ -476,6 +683,43 @@ body {
 </div>
 
 <script>
+  // Service filtering function
+function filterServices(category) {
+  const buttons = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.service-card');
+  
+  // Update active button
+  buttons.forEach(btn => {
+    if (btn.textContent.toLowerCase().includes(category) || 
+        (category === 'all' && btn.textContent === 'All Services')) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
+  
+  // Show/hide cards
+  cards.forEach(card => {
+    if (category === 'all' || card.getAttribute('data-category') === category) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
     function toggleMenu(){
   const menu=document.getElementById('mobileMenu');
   menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
