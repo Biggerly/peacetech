@@ -777,7 +777,7 @@ footer{
 
 @media (max-width: 480px) {
   .services {
-    grid-template-columns: 1fr;
+    grid-template-columns: fr;
     max-width: 320px;
     margin: 0 auto;
   }
@@ -1496,6 +1496,8 @@ footer {
   }
 }
 
+
+
 body {
   zoom: 0.8; /* 80% zoom out */
 }
@@ -1551,7 +1553,29 @@ body {
     </div>
   </div>
 </div>
+
+
+<section style="padding: 50px 20px; background: #f8faff;">
+  <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+    <h3 style="color: var(--primary); margin-bottom: 15px;">
+      <i class="material-icons" style="vertical-align: middle;">verified</i>
+      CAC Registered Business
+    </h3>
+    
+    <img 
+      src="peace.jpg" 
+      alt="CAC Registration Certificate" 
+      style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border: 3px solid white;"
+    >
+    
+    <p style="margin-top: 15px; color: #666; font-size: 14px;">
+      Officially registered with the Corporate Affairs Commission
+    </p>
+  </div>
+</section>
+
 <!-- SERVICES -->
+<!-- SERVICES SECTION -->
 <section class="services-section">
   <div class="services-header">
     <h2 class="section-title">What We Do</h2>
@@ -1561,6 +1585,7 @@ body {
   </div>
   
   <div class="services">
+    <!-- Business Registration Services -->
     <div class="card has-image" onclick="openModal()" style="cursor: pointer;">
       <div class="service-img">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcp6yKObO7tT8rL_7Fwr5E8Wi3s0HjDt11WQ&s" alt="CAC Registration">
@@ -1582,6 +1607,44 @@ body {
       <div class="card-footer">
         <span class="book-now">Book Now</span>
         <i class="material-icons">passport</i>
+      </div>
+    </div>
+
+
+        <!-- Paper & Textbook Supplies -->
+    <div class="card has-image" onclick="openModal()" style="cursor: pointer;">
+      <div class="service-img">
+        <img src="https://cdn-icons-png.flaticon.com/512/3767/3767084.png" alt="Office Paper">
+      </div>
+      <h3>Office Paper Supply</h3>
+      <p class="service-desc">Wholesale supply of A4, A3 papers, and office stationery materials</p>
+      <div class="card-footer">
+        <span class="book-now">Order Now</span>
+        <i class="material-icons">description</i>
+      </div>
+    </div>
+    
+    <div class="card has-image" onclick="openModal()" style="cursor: pointer;">
+      <div class="service-img">
+        <img src="https://cdn-icons-png.flaticon.com/512/2936/2936733.png" alt="Textbooks">
+      </div>
+      <h3>Textbook Supply</h3>
+      <p class="service-desc">Supply of educational textbooks for schools, colleges, and universities</p>
+      <div class="card-footer">
+        <span class="book-now">Order Now</span>
+        <i class="material-icons">menu_book</i>
+      </div>
+    </div>
+    
+    <div class="card has-image" onclick="openModal()" style="cursor: pointer;">
+      <div class="service-img">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Notebooks">
+      </div>
+      <h3>Notebook Supply</h3>
+      <p class="service-desc">Bulk supply of exercise books, note pads, and writing materials</p>
+      <div class="card-footer">
+        <span class="book-now">Order Now</span>
+        <i class="material-icons">book</i>
       </div>
     </div>
     
@@ -1608,8 +1671,88 @@ body {
         <i class="material-icons">work</i>
       </div>
     </div>
+    
+    <!-- Biogas Technology Services -->
+    <div class="card has-image" onclick="openModal()" style="cursor: pointer;">
+      <div class="service-img">
+        <img src="https://cdn-icons-png.flaticon.com/512/2490/2490333.png" alt="Biogas Installation">
+      </div>
+      <h3>Biogas Facility Installation</h3>
+      <p class="service-desc">Complete installation of biogas facilities and bio-digester septic tanks</p>
+      <div class="card-footer">
+        <span class="book-now">Book Now</span>
+        <i class="material-icons">eco</i>
+      </div>
+    </div>
+    
+    <div class="card has-image" onclick="openModal()" style="cursor: pointer;">
+      <div class="service-img">
+        <img src="https://cdn-icons-png.flaticon.com/512/1903/1903373.png" alt="Waste Conversion">
+      </div>
+      <h3>Waste Conversion</h3>
+      <p class="service-desc">Convert wastes to fertilizers, cooking gas, and electricity</p>
+      <div class="card-footer">
+        <span class="book-now">Book Now</span>
+        <i class="material-icons">recycling</i>
+      </div>
+    </div>
+    
+    <div class="card has-image" onclick="openModal()" style="cursor: pointer;">
+      <div class="service-img">
+        <img src="https://cdn-icons-png.flaticon.com/512/3448/3448595.png" alt="Bio-Waste Management">
+      </div>
+      <h3>Bio-Waste Management</h3>
+      <p class="service-desc">Professional consultancy for bio-waste management solutions</p>
+      <div class="card-footer">
+        <span class="book-now">Book Now</span>
+        <i class="material-icons">delete</i>
+      </div>
+    </div>
+    
+    <div class="card has-image" onclick="openModal()" style="cursor: pointer;">
+      <div class="service-img">
+        <img src="https://cdn-icons-png.flaticon.com/512/2340/2340156.png" alt="Biogas Equipment">
+      </div>
+      <h3>Biogas Equipment Supply</h3>
+      <p class="service-desc">Supply of biogas facilities, lamps, compressors, and pumping machines</p>
+      <div class="card-footer">
+        <span class="book-now">Book Now</span>
+        <i class="material-icons">build</i>
+      </div>
+    </div>
+    
+    <div class="card has-image" onclick="openModal()" style="cursor: pointer;">
+      <div class="service-img">
+        <img src="https://cdn-icons-png.flaticon.com/512/2046/2046920.png" alt="Renewable Energy">
+      </div>
+      <h3>Renewable Energy Consultancy</h3>
+      <p class="service-desc">Expert consultancy for renewable power and energy solutions</p>
+      <div class="card-footer">
+        <span class="book-now">Book Now</span>
+        <i class="material-icons">bolt</i>
+      </div>
+    </div>
+    
+    <div class="card has-image" onclick="openModal()" style="cursor: pointer;">
+      <div class="service-img">
+        <img src="https://cdn-icons-png.flaticon.com/512/3062/3062645.png" alt="Construction">
+      </div>
+      <h3>Bio-Fill Construction</h3>
+      <p class="service-desc">Construction of bio-fill / soak away systems</p>
+      <div class="card-footer">
+        <span class="book-now">Book Now</span>
+        <i class="material-icons">construction</i>
+      </div>
+    </div>
   </div>
 </section>
+
+
+<!-- CAC CERTIFICATE SECTION -->
+
+<!-- CAC CERTIFICATE MODAL -->
+<!-- SIMPLE CAC PREVIEW -->
+
 
 <!-- GALLERY -->
  <!-- GALLERY SLIDER -->
@@ -1985,12 +2128,34 @@ document.addEventListener('DOMContentLoaded', function() {
       <input type="text" name="name" placeholder="Full Name" required>
       <input type="tel" name="phone" placeholder="Phone Number" required>
       <select name="service" required>
-        <option value="">Select Service</option>
-        <option>CAC Registration</option>
-        <option>Passport Processing</option>
-        <option>Trademark Registration</option>
-        <option>Business Consulting</option>
-      </select>
+  <option value="">Select Service</option>
+  
+  <!-- Business Services -->
+  <option>CAC Registration</option>
+  <option>Passport Processing</option>
+  <option>Trademark Registration</option>
+  <option>Business Consulting</option>
+  
+  
+  <option>Office Paper Supply (A4, A3)</option>
+  <option>Textbook Supply</option>
+  <option>Notebook Supply</option>
+
+  <!-- Biogas Technology Services -->
+  <option>Biogas Facility Installation</option>
+  <option>Bio-digester Septic Tank Installation</option>
+  <option>Waste to Fertilizer Conversion</option>
+  <option>Waste to Cooking Gas/Electricity Conversion</option>
+  <option>Bio-Fill / Soak Away Construction</option>
+  <option>Bio-Waste Management Consultancy</option>
+  <option>Biogas Equipment Supply</option>
+  <option>Biogas Compressor Machine Sales</option>
+  <option>Renewable Power/Energy Consultancy</option>
+  
+  <!-- Other -->
+  <option>General Consultation</option>
+  <option>Custom Service Request</option>
+</select>
       <textarea name="message" placeholder="Additional Message"></textarea>
 
       <button type="submit">Submit Booking</button>
@@ -1998,6 +2163,59 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
+<!-- WhatsApp & Call Button -->
+<div style="position: fixed; bottom: 25px; right: 25px; z-index: 999; display: flex; flex-direction: column; gap: 15px;">
+  
+  <!-- WhatsApp Button -->
+<!-- WhatsApp Button with SVG Logo -->
+<a href="https://wa.me/2347069160100" 
+   target="_blank" 
+   class="floating-whatsapp"
+   aria-label="Chat on WhatsApp"
+   style="position: fixed; bottom: 100px; right: 25px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4); text-decoration: none; z-index: 999; transition: all 0.3s ease;">
+  
+  <!-- WhatsApp SVG Logo -->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor" style="filter: brightness(0) invert(1);">
+    <path d="M12.032 2.016c-5.484 0-9.984 4.5-9.984 10.032 0 2.016.6 3.984 1.656 5.672l-1.728 6.288 6.432-1.704c1.632.888 3.48 1.392 5.376 1.392 5.532 0 10.032-4.5 10.032-10.032 0-5.532-4.5-10.032-10.032-10.032zm5.784 15.36c-.312.84-1.848 1.536-2.856 1.608-.72 0-1.584-.192-4.008-.84-3.144-.888-5.16-3.144-5.328-3.312-.168-.168-1.344-1.776-1.344-3.384 0-1.656.84-2.472 1.152-2.808.288-.312.72-.432 1.152-.432.192 0 .384.024.552.048.312.048.528.096.768.36.24.264.84.888.96 1.2.12.288.168.624.024.96-.144.312-.264.528-.384.72-.12.192-.24.36-.36.528-.12.168-.048.36.12.528.36.36.768.768 1.176 1.032.624.456 1.176.648 1.632.648.312 0 .528-.072.696-.192.168-.12.36-.264.696-.6.288-.288.648-.312.96-.168.312.144 1.968.936 2.304 1.104.336.168.552.24.624.36.072.12.072.696-.24 1.536z"/>
+  </svg>
+  
+  <span class="pulse" style="position: absolute; width: 100%; height: 100%; border-radius: 50%; background: #25D366; opacity: 0.5; animation: pulse 2s infinite;"></span>
+</a>
+  
+  <!-- Call Button -->
+  <a href="tel:07069160100" 
+     style="background: var(--accent); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(230, 57, 70, 0.5); text-decoration: none; transition: all 0.3s ease; position: relative;">
+    
+    <i class="material-icons" style="font-size: 32px;">call</i>
+    
+    <span style="position: absolute; bottom: -30px; left: 50%; transform: translateX(-50%); white-space: nowrap; background: rgba(0,0,0,0.7); color: white; padding: 3px 8px; border-radius: 4px; font-size: 12px; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
+      Call Now
+    </span>
+  </a>
+</div>
+
+<script>
+// Show tooltip on hover
+const buttons = document.querySelectorAll('a[href^="https://wa.me"], a[href^="tel:"]');
+buttons.forEach(button => {
+  button.addEventListener('mouseenter', function() {
+    this.querySelector('span').style.opacity = '1';
+  });
+  
+  button.addEventListener('mouseleave', function() {
+    this.querySelector('span').style.opacity = '0';
+  });
+  
+  // For touch devices
+  button.addEventListener('touchstart', function() {
+    const tooltip = this.querySelector('span');
+    tooltip.style.opacity = '1';
+    setTimeout(() => {
+      tooltip.style.opacity = '0';
+    }, 2000);
+  });
+});
+</script>
 <script>
 
 function toggleMenu(){
