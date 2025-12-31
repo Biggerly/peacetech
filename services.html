@@ -451,13 +451,12 @@ body {
   <p>Professional, reliable solutions tailored to your needs</p>
 </div><br>
 
-<div class="category-filter">
-  <div class="filter-buttons">
-    <button class="filter-btn active" onclick="filterServices('all')">All Services</button>
-    <button class="filter-btn" onclick="filterServices('business')">Business Services</button>
-    <button class="filter-btn" onclick="filterServices('paper')">Paper & Supplies</button>
-    <button class="filter-btn" onclick="filterServices('biogas')">Biogas Technology</button>
-  </div>
+<div class="filter-buttons">
+  <button class="filter-btn active" onclick="filterServices('all')">All Services</button>
+  <button class="filter-btn" onclick="filterServices('business')">Business Services</button>
+  <button class="filter-btn" onclick="filterServices('paper')">Paper & Supplies</button>
+  <button class="filter-btn" onclick="filterServices('equipment')">Office Equipment</button>
+  <button class="filter-btn" onclick="filterServices('biogas')">Biogas Technology</button>
 </div>
 <!-- SERVICES -->
 <section>
@@ -492,6 +491,35 @@ body {
       <p>Bulk supply of exercise books, note pads, and writing materials.</p>
       <button onclick="bookService('Notebook Supply')">Order Now</button>
     </div>
+
+    <!-- Office Equipment Services - Detailed -->
+<div class="service-card" data-category="equipment">
+  <i class="material-icons">computer</i>
+  <h3>Computers & Laptops</h3>
+  <p>Sales of desktop computers, laptops, workstations for office and personal use.</p>
+  <button onclick="bookService('Computer & Laptop Sales')">Order Now</button>
+</div>
+
+<div class="service-card" data-category="equipment">
+  <i class="material-icons">print</i>
+  <h3>Printers & Scanners</h3>
+  <p>Supply of office printers, scanners, photocopiers, and multifunction devices.</p>
+  <button onclick="bookService('Printer & Scanner Supply')">Order Now</button>
+</div>
+
+<div class="service-card" data-category="equipment">
+  <i class="material-icons">devices</i>
+  <h3>Office Electronics</h3>
+  <p>Supply of projectors, UPS, stabilizers, and other office electronic equipment.</p>
+  <button onclick="bookService('Office Electronics Supply')">Order Now</button>
+</div>
+
+<div class="service-card" data-category="equipment">
+  <i class="material-icons">chair</i>
+  <h3>Office Furniture</h3>
+  <p>Supply of office chairs, tables, cabinets, and ergonomic workstations.</p>
+  <button onclick="bookService('Office Furniture Supply')">Order Now</button>
+</div>
 
     <div class="service-card" data-category="business">
 <i class="material-icons">local_airport</i>
@@ -618,8 +646,8 @@ body {
     </div>
     
     <div class="footer-contact">
-      <p><span class="material-icons">call</span> 08063132518 • 07069160100</p>
-      <p><span class="material-icons">location_on</span> Ughelli, Delta State</p>
+      <p><span class="material-icons">call</span> 08063132518 • 07069160100</p><br>
+      <p><span class="material-icons">location_on</span>OFFICE: 2nd Flat, Justice Akporido's Compound, Damure Street, Afiesere Ughelli, Delta State</p>
     </div>
   </div>
   
@@ -670,6 +698,11 @@ body {
   <option>Biogas Equipment Supply</option>
   <option>Biogas Compressor Machine Sales</option>
   <option>Renewable Power/Energy Consultancy</option>
+
+  
+  <option>Office Equipment Supply</option>
+  <option>Computer & Laptop Sales</option>
+  <option>Printer & Scanner Supply</option>
   
   <!-- Other -->
   <option>General Consultation</option>
